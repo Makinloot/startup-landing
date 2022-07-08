@@ -1,0 +1,102 @@
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.container {
+    width: min(100%, 69rem);
+    margin: 0 auto;
+}
+
+// margin & padding classes
+$amounts: (1, 2, 3, 4);
+
+@each $item in $amounts {
+    .m-#{$item} {
+        margin: #{$item}rem;
+    }
+    .my-#{$item} {
+        margin: #{$item}rem 0;
+    }
+    .mauto-#{$item} {
+        margin: #{$item}rem auto;
+    }
+
+    .p-#{$item} {
+        padding: #{$item}rem;
+    }
+    .py-#{$item} {
+        padding: #{$item}rem 0;
+    }
+}
+
+// buttons
+%btn {
+    padding: .5rem 1.25rem;
+    border-radius: 4px;
+    font-family: $ff-medium;
+    font-size: $fs-regular;
+    color: $clr-light;
+    line-height: 1.5rem;
+    text-transform: capitalize;
+    transition: .3s;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+%btn:hover {
+    transform: scale(.9);
+}
+
+.btn-primary {
+    @extend %btn;
+    background-color: $clr-primary;
+}
+
+.btn-secondary {
+    @extend %btn;
+    background-color: $clr-secondary;
+}
+
+// heading
+%heading {
+    font-family: $ff-bold;
+    color: $clr-light;
+    text-transform: capitalize
+}
+
+.heading-primary {
+    @extend %heading;
+    font-size: $fs-xxl;
+    line-height: 3.125rem;
+}
+
+.heading-secondary {
+    @extend %heading;
+    font-size: $fs-xl;
+    line-height: 2.625rem;
+}
+
+// txt
+%txt {
+    font-family: $ff-regular;
+    color: $clr-light-fade;
+    line-height: 1.8rem;
+}
+
+.txt-primary {
+    @extend %txt;
+    max-width: 768px;
+    font-size: $fs-medium;
+}
+
+.txt-secondary {
+    @extend %txt;
+    font-size: $fs-regular;
+}

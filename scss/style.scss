@@ -1,5 +1,3 @@
-@import 'fonts';
-
 // Variables
 $ff-regular: 'Inter', sans-serif;
 $ff-medium: 'Inter medium', sans-serif;
@@ -8,25 +6,64 @@ $ff-bold: 'Inter bold', sans-serif;
 $fs-regular: 1rem;
 $fs-medium: 1.25rem;
 $fs-big: 1.5rem;
+$fs-xl: 2rem;
+$fs-xxl: 2.5rem;
 
 $clr-primary: #5D5DFF;
 $clr-secondary: #33363A;
 $clr-light: #C5D2DC;
+$clr-light-fade: #9BA9B4;
 
-// custom classes
-.flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@import 'fonts';
+
+// reset css
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: $ff-regular;
+    color: $clr-light
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+@import 'utilities';
+
+a {
+    color: inherit;
 }
 
-.container {
-    width: min(100%, 69rem);
-    margin: 0 auto;
+body {
+    background-color: #25282C;
+}
+
+// header styles
+.header .wrapper {
+    justify-content: space-between;
+    
+    .header__menu {
+        gap: 3rem;
+        color: $clr-light;
+        text-transform: capitalize;
+    }
+}
+
+// hero section styles
+.hero {
+
+    &__primary {
+        text-align: center;
+
+        h2 {
+            font-size: 3.25rem;
+        }
+    }
+
+    &__buttons {
+        gap: .75rem;
+
+        .btn-primary,
+        .btn-secondary {
+            padding: .75rem 2rem;
+        }
+    }
 }
