@@ -98,4 +98,29 @@ body {
     }
 }
 
+// features styles
+.features {
+    gap: 4rem;
+
+    &__primary {
+        text-align: center;
+    }
+
+    &__secondary {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 64px;
+
+        .grid-item {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .item__icon {
+            padding: 1.25rem;
+            border-radius: 50%;
+        }
+    }
+}
+
 @import 'media';
