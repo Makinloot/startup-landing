@@ -23,7 +23,8 @@ $clr-light-fade: #9BA9B4;
     box-sizing: border-box;
     text-decoration: none;
     font-family: $ff-regular;
-    color: $clr-light
+    color: $clr-light;
+    // outline: 1px solid green;
 }
 
 @import 'utilities';
@@ -33,10 +34,20 @@ a {
 }
 
 body {
-    background-color: #25282C;
+    background-color: #17181a;
 }
 
 // header styles
+.header .container {
+    position: relative;
+
+    .bg-header {
+        position: absolute;
+        top: -4rem;
+        right: -1rem;
+        z-index: -1;
+    }
+}
 .header .wrapper {
     justify-content: space-between;
     
@@ -49,6 +60,7 @@ body {
 
 // hero section styles
 .hero {
+    gap: 4rem;
 
     &__primary {
         text-align: center;
@@ -66,4 +78,24 @@ body {
             padding: .75rem 2rem;
         }
     }
+
+    &__secondary {
+        position: relative;
+
+        img {
+            width: 100%;
+            border-radius: .5rem;
+            object-fit: cover;
+        }
+
+        .bg-main {
+            position: absolute;
+            bottom: -2rem;
+            left: -6rem;
+            width: 40%;
+            z-index: -1;
+        }
+    }
 }
+
+@import 'media';
