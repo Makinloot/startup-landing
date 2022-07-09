@@ -23,7 +23,7 @@ $amounts: (1, 2, 3, 4);
 @each $item in $amounts {
     .m-#{$item} {
         margin: #{$item}rem;
-    }
+}
 
     .my-#{$item} {
         margin: #{$item}rem 0;
@@ -106,12 +106,9 @@ $amounts: (1, 2, 3, 4);
     font-size: $fs-regular;
 }
 
-
-// @mixin displayFlex($x: center, $y: center) {
-//     display: flex;
-//     align-items: $x;
-//     justify-content: $y;
-// }
-
-// @include displayFlex(null, null);
-
+// card
+%card {
+    padding: 1.5rem;
+    background-color: $clr-dark;
+    border-radius: 4px;
+}

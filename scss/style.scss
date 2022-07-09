@@ -13,12 +13,14 @@ $fs-xxl: 2.5rem;
 
 $clr-primary: #5D5DFF;
 $clr-secondary: #33363A;
+$clr-dark: #25282C;
 $clr-light: #C5D2DC;
 $clr-light-fade: #9BA9B4;
 $clr-success-light: #C6F6D5;
 $clr-success: #36A269;
 
 @import 'fonts';
+@import 'https://unpkg.com/swiper/swiper-bundle.min.css';
 
 // reset css
 *,*::before,*::after {
@@ -161,7 +163,7 @@ body {
         gap: 4rem;
 
         &-item {
-            gap: 1.5rem;
+            gap: 2.5rem;
         }
 
         .cursive-heading {
@@ -174,6 +176,44 @@ body {
             justify-content: flex-start;
             gap: .5rem;
             
+        }
+    }
+}
+
+// feedback styles
+.feedback {
+    gap: 4rem;
+
+    &__primary {
+        text-align: center;
+    }
+
+    .swiper {
+        width: 100%;
+        
+        &-pagination {
+            bottom: 0rem;
+        }
+    }
+
+    .swiper-slide {
+        @extend %card;
+
+        .swiper-icon {
+            max-width: 48px;
+            max-height: 48px;
+        }
+
+        hr {
+            border: 1px solid #9ba9b438;
+        }
+    }
+
+    .swiper-heading {
+        @extend %heading;
+
+        span {
+            color: $clr-primary;
         }
     }
 }
