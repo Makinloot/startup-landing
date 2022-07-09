@@ -1,0 +1,50 @@
+.signup__wrapper {
+    min-height: 100vh;
+}
+
+.signup__form {
+    flex-direction: column;
+    gap: 4rem;
+
+    h2 {
+        max-width: 768px;
+        text-align: center;
+    }
+
+    form {
+        width: 400px;
+        flex-direction: column;
+
+        .google {
+            @extend %btn;
+            display: block;
+            width: 100%;
+            background-color: $clr-error;
+            text-align: center;
+        }
+
+        %pseudo {
+            content: '';
+            position: absolute;
+            width: 40%;
+            border: 1px solid;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.151);
+        }
+
+        .txt-secondary {
+            position: relative;
+
+            &::before {
+                @extend %pseudo;
+                left: -45%;
+            }
+
+            &::after {
+                @extend %pseudo;
+                right: -45%;
+            }
+        }
+    }
+}

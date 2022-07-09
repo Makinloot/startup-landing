@@ -1,6 +1,8 @@
 @import 'variables';
 @import 'fonts';
 @import 'https://unpkg.com/swiper/swiper-bundle.min.css';
+@import 'signup';
+@import 'signin';
 
 // reset css
 *,*::before,*::after {
@@ -237,6 +239,7 @@ body {
             font-family: $fs-medium;
             color: $clr-primary;
             border: none;
+            cursor: pointer;
         }
 
         ::placeholder {
