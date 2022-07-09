@@ -69,6 +69,31 @@ $amounts: (1, 2, 3, 4);
     background-color: $clr-secondary;
 }
 
+// links
+%link {
+    position: relative;
+}
+
+%link::after {
+    content: '';
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    width: 0;
+    outline: 0px solid;
+    transition: .2s;
+}
+
+%link:hover:after {
+    border: 1px solid;
+    width: 100%;
+    left: 0;
+}
+
+.link {
+    @extend %link;
+}
+
 // heading
 %heading {
     font-family: $ff-bold;
