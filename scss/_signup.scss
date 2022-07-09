@@ -4,20 +4,20 @@
 
 .signup__form {
     flex-direction: column;
-    gap: 4rem;
+    // gap: 4rem;
 
     h2 {
         max-width: 768px;
         text-align: center;
     }
 
-    form {
-        width: 400px;
+    .sign-up {
+        max-width: 400px;
         flex-direction: column;
+        overflow: hidden;
 
         .google {
             @extend %btn;
-            display: block;
             width: 100%;
             background-color: $clr-error;
             text-align: center;
@@ -45,6 +45,42 @@
                 @extend %pseudo;
                 right: -45%;
             }
+        }
+
+        .form__input-wrapper {
+            width: 100%;
+            margin: 1rem 0;
+            row-gap: 4px;
+
+            &:nth-child(6) {
+                margin: 0 0 1rem 0;
+            }
+
+            label {
+                font-family: $ff-medium;
+                font-size: $fs-small;
+            }
+
+            input {
+                padding: .75rem 1rem;
+                background-color: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.151);
+                border-radius: 4px;
+                outline: none;
+            }
+        }
+
+        input[type=submit] {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .already-registered {
+
+        a {
+            color: $clr-primary;
         }
     }
 }

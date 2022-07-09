@@ -148,6 +148,14 @@
             }
         }
     }
+
+    // signup styles
+    .signup__form {
+        .heading-primary {
+            font-size: 2.25rem;
+            text-align: left;
+        }
+    }
 }
 
 @media (max-width: 320px) {
@@ -171,4 +179,15 @@
             }
         }
     }
+
+    // signup styles
+    .signup__form {
+
+        .heading-primary {
+            font-size: 2rem;
+            text-align: left;
+        }
+    }
+
+
 }
