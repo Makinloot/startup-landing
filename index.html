@@ -9,6 +9,7 @@
     <title>StartUp</title>
 </head>
 <body>
+    <!-- header -->
     <header class="header p-1">
         <div class="container">
             <div class="wrapper flex">
@@ -24,6 +25,7 @@
             <img class="bg-header" src="./images/shape.png" alt="shapes">
         </div>
     </header>
+    <!-- main -->
     <main class="main p-1">
         <div class="container">
             <!-- hero section -->
@@ -234,8 +236,25 @@
                     <div class="swiper-pagination"></div>
                   </div>
             </section>
+            <section class="subscribe grid my-4 p-3">
+                    <div class="subscribe__primary">
+                        <h2 class="subscribe-heading">stay in the loop</h2>
+                        <p class="txt-secondary my-1">Join our newsletter to get top news before anyone else.</p>
+                    </div>
+                    <form class="subscribe__secondary flex" action="#">
+                        <input type="email" name="email" id="email" placeholder="Email address" required>
+                        <input type="submit" value="Subscribe">
+                    </form>
+                    <div class="form-bg">
+                        <img src="./images/form-shape.png" alt="shape">
+                    </div>
+            </section>
         </div>
     </main>
+    <!-- footer -->
+    <footer class="footer">
+
+    </footer>
 
     <script type="module" src="./js/index.js"></script>
 </body>

@@ -38,9 +38,49 @@
             }
         }
     }
+
+
 }
 
 @media (max-width: 768px) {
+    // subscribe styles
+    .subscribe {
+        grid-template-columns: 1fr;
+
+        &__secondary {
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+    }
+    // .subscribe {
+    //     grid-template-columns: 1fr;
+    //     grid-template-rows: 1fr 1fr;
+    //     gap: 1rem;
+    //     background-color: $clr-primary;
+    //     background-color: red;
+    
+    //     &__secondary {
+    //         grid-template-columns: 70% 1fr;
+    //         gap: .5rem;
+    
+    //         input[type=email] {
+    //             @extend %btn;
+    //             outline: 1px $clr-light solid;
+    //             border: none;
+    //             background-color: transparent;
+    //         }
+    
+    //         input[type=submit] {
+    //             @extend %btn;
+    //             font-family: $fs-medium;
+    //             color: $clr-primary;
+    //         }
+    
+    //         ::placeholder {
+    //             color: #ABABFF;
+    //         }
+    //     }
+    // }
 
 }
 

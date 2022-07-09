@@ -217,5 +217,41 @@ body {
         }
     }
 }
+// subscribe styles
+.subscribe {
+    position: relative;
+    grid-template-columns: 50% 50%;
+    gap: 1rem;
+    background-color: $clr-primary;
+
+    &__secondary {
+        gap: .5rem;
+
+        input[type=email] {
+            @extend %btn;
+            outline: 1px $clr-light solid;
+            border: none;
+            background-color: transparent;
+        }
+
+        input[type=submit] {
+            @extend %btn;
+            font-family: $fs-medium;
+            color: $clr-primary;
+            border: none;
+        }
+
+        ::placeholder {
+            color: #ABABFF;
+        }
+    }
+
+    .form-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        pointer-events: none;
+    }
+}
 
 @import 'media';

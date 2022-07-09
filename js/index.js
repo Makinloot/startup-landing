@@ -10,7 +10,7 @@ window.onload = () => {
     if(width.width < 480) sliderPerView = 1;
     // initialize slider
     const swiper = new Swiper(".mySwiper", {
-        slidesPerView: `${sliderPerView}`,
+        slidesPerView: sliderPerView,
         spaceBetween: 30,
         pagination: {
           el: ".swiper-pagination",
