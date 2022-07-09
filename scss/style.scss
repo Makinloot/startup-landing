@@ -2,7 +2,9 @@
 $ff-regular: 'Inter', sans-serif;
 $ff-medium: 'Inter medium', sans-serif;
 $ff-bold: 'Inter bold', sans-serif;
+$ff-cursive: 'architect', cursive;
 
+$fs-small: 0.875rem;
 $fs-regular: 1rem;
 $fs-medium: 1.25rem;
 $fs-big: 1.5rem;
@@ -13,6 +15,8 @@ $clr-primary: #5D5DFF;
 $clr-secondary: #33363A;
 $clr-light: #C5D2DC;
 $clr-light-fade: #9BA9B4;
+$clr-success-light: #C6F6D5;
+$clr-success: #36A269;
 
 @import 'fonts';
 
@@ -119,6 +123,57 @@ body {
         .item__icon {
             padding: 1.25rem;
             border-radius: 50%;
+        }
+
+        p {
+            max-width: 326px;
+        }
+    }
+}
+
+// procut styles
+.product {
+    gap: 4rem;
+
+    &::before,&::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #c5d2dc42;
+    }
+
+    &__primary {
+        text-align: center;
+
+        &-success {
+            display: inline-block;
+            padding: 4px 12px;
+            background-color: $clr-success-light;
+            border-radius: 1rem;
+            font-family: $ff-medium;
+            color: $clr-success;
+            font-size: $fs-small;
+        }
+    }
+
+    &__secondary {
+        gap: 4rem;
+
+        &-item {
+            gap: 1.5rem;
+        }
+
+        .cursive-heading {
+            font-family: $ff-cursive;
+            font-size: $fs-medium;
+            color: $clr-primary;
+        }
+
+        .bullet-points__item {
+            justify-content: flex-start;
+            gap: .5rem;
+            
         }
     }
 }

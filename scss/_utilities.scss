@@ -105,3 +105,13 @@ $amounts: (1, 2, 3, 4);
     @extend %txt;
     font-size: $fs-regular;
 }
+
+
+// @mixin displayFlex($x: center, $y: center) {
+//     display: flex;
+//     align-items: $x;
+//     justify-content: $y;
+// }
+
+// @include displayFlex(null, null);
+

@@ -26,3 +26,13 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'architect';
+    src: url('../fonts/ArchitectsDaughter-Regular.woff2') format('woff2'),
+        url('../fonts/ArchitectsDaughter-Regular.woff') format('woff'),
+        url('../fonts/ArchitectsDaughter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
