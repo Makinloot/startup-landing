@@ -10,10 +10,11 @@
 </head>
 <body>
     <div class="container p-1">
-        <div class="signup__wrapper flex">
-            <div class="signup__form flex">
-                <h2 class="heading-primary">Welcome. We exist to make entrepreneurism easier.</h2>
-                <form class="sign-up flex my-4" action="#" method="post">
+        <img class="bg-signup" src="../images/shape.png" alt="shapes">
+        <div class="auth__wrapper flex">
+            <div class="auth__form">
+                <h2 class="heading-primary">We exist to make things easier.</h2>
+                <form class="auth flex" action="#" method="post">
                     <a class="google" href="#">sign up with google</a>
                     <span class="txt-secondary my-2">Or, register with your email</span>
                     <div class="form__input-wrapper grid">
@@ -22,14 +23,14 @@
                     </div>
                     <div class="form__input-wrapper grid">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Password" autocomplete="off" required>
+                        <input type="email" id="email" placeholder="Email address" autocomplete="off" required>
                     </div>
                     <div class="form__input-wrapper grid">
                         <label for="password">Password</label>
                         <input type="password" id="password" placeholder="Password" autocomplete="off" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
                     </div>
                     <div class="form__input-wrapper grid">
-                        <label for="confirm-password">Username</label>
+                        <label for="confirm-password">Confirm password</label>
                         <input type="password" id="confirm-password" placeholder="Confirm password" autocomplete="off" required>
                     </div>
                     <div class="form__input-wrapper">
@@ -38,7 +39,7 @@
                     </div>
                     <input class="btn-primary" type="submit" value="Sign Up">
                 </form>
-                <span class="already-registered txt-secondary">Already using Open PRO? <a href="#">Sign in</a></span>
+                <span class="already-registered txt-secondary">Already using Open PRO? <a href="./signin.html">Sign in</a> or <a href="../index.html">Go back</a></span>
             </div>
         </div>
     </div>

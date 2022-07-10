@@ -1,17 +1,22 @@
-.signup__wrapper {
+.bg-signup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+.auth__wrapper {
     min-height: 100vh;
 }
 
-.signup__form {
-    flex-direction: column;
-    // gap: 4rem;
+.auth__form {
 
     h2 {
         max-width: 768px;
         text-align: center;
     }
 
-    .sign-up {
+    .auth {
+        margin: 4rem auto;
         max-width: 400px;
         flex-direction: column;
         overflow: hidden;
@@ -75,10 +80,17 @@
             border: none;
             cursor: pointer;
         }
+
+        .check-input {
+            justify-content: space-between;
+            
+        }
     }
 
     .already-registered {
-
+        display: block;
+        text-align: center;
+        
         a {
             color: $clr-primary;
         }

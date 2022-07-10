@@ -8,7 +8,35 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>StartUp | Sign In</title>
 </head>
-<body class="full-height">
-    
+<body>
+    <div class="container p-1">
+        <img class="bg-signup" src="../images/shape.png" alt="shapes">
+        <div class="auth__wrapper flex">
+            <div class="auth__form">
+                <h2 class="heading-primary">Welcome back.</h2>
+                <form class="auth flex" action="#" method="post">
+                    <a class="google" href="#">sign in with google</a>
+                    <span class="txt-secondary my-2">Or, sign in with your email</span>
+                    <div class="form__input-wrapper grid">
+                        <label for="signin-email">Email</label>
+                        <input type="email" id="signin-email" placeholder="Email address" autocomplete="off" required>
+                    </div>
+                    <div class="form__input-wrapper grid">
+                        <label for="signin-password">Password</label>
+                        <input type="password" id="signin-password" placeholder="Password" autocomplete="off" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
+                    </div>
+                    <div class="form__input-wrapper check-input flex">
+                        <div>
+                            <input type="checkbox" name="keep-signed-in" id="keep-signed-in">
+                            <label for="keep-signed-in">Keep me signed in</label>
+                        </div>
+                        <a href="#" style="color: #5D5DFF">forgot password?</a>
+                    </div>
+                    <input class="btn-primary" type="submit" value="Sign Up">
+                </form>
+                <span class="already-registered txt-secondary">Already using Open PRO? <a href="./signup.html">Sign up</a> or <a href="../index.html">Go back</a></span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
