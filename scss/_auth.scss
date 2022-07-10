@@ -53,13 +53,10 @@
         }
 
         .form__input-wrapper {
+            position: relative;
             width: 100%;
             margin: 1rem 0;
             row-gap: 4px;
-
-            &:nth-child(6) {
-                margin: 0 0 1rem 0;
-            }
 
             label {
                 font-family: $ff-medium;
@@ -72,6 +69,28 @@
                 border: 1px solid rgba(255, 255, 255, 0.151);
                 border-radius: 4px;
                 outline: none;
+            }
+
+            .input-error {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: $fs-small;
+                color: $clr-error;
+                z-index: 1;
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+
+        .checkbox-wrapper {
+            
+            .input-error {
+                top: -1.2rem;
+                left: 0;
             }
         }
 

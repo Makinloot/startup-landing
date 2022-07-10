@@ -14,28 +14,33 @@
         <div class="auth__wrapper flex">
             <div class="auth__form">
                 <h2 class="heading-primary">We exist to make things easier.</h2>
-                <form class="auth flex" action="#" method="post">
+                <form class="auth flex" id="signup-form" action="./signin.html" novalidate>
                     <a class="google" href="#">sign up with google</a>
                     <span class="txt-secondary my-2">Or, register with your email</span>
                     <div class="form__input-wrapper grid">
                         <label for="username">Username</label>
                         <input type="text" id="username" placeholder="Username" minlength="6" maxlength="16" autocomplete="off" required>
+                        <span class="input-error flex" id="username-error">Minimum 4 characters</span>
                     </div>
                     <div class="form__input-wrapper grid">
                         <label for="email">Email</label>
                         <input type="email" id="email" placeholder="Email address" autocomplete="off" required>
+                        <span class="input-error flex" id="email-error"></span>
                     </div>
                     <div class="form__input-wrapper grid">
                         <label for="password">Password</label>
                         <input type="password" id="password" placeholder="Password" autocomplete="off" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
+                        <span class="input-error flex" id="password-error"></span>
                     </div>
                     <div class="form__input-wrapper grid">
                         <label for="confirm-password">Confirm password</label>
                         <input type="password" id="confirm-password" placeholder="Confirm password" autocomplete="off" required>
+                        <span class="input-error flex" id="confirm-password-error"></span>
                     </div>
-                    <div class="form__input-wrapper">
+                    <div class="form__input-wrapper checkbox-wrapper">
                         <input type="checkbox" name="privacy-policy" id="privacy-policy" required>
-                        <label for="privacy-policy">I agree to be contacted by Open PRO about this offer as per the Open PRO <a href="#">Privacy Policy.</a></label>
+                        <label for="privacy-policy">I agree to be contacted by Open PRO about this offer as per the Open PRO <a href="#" style="color: #5D5DFF">Privacy Policy.</a></label>
+                        <span class="input-error" id="checkbox-error">You must accept our privacy policy rules</span>
                     </div>
                     <input class="btn-primary" type="submit" value="Sign Up">
                 </form>
@@ -43,5 +48,7 @@
             </div>
         </div>
     </div>
+
+    <script src="../js/auth.js"></script>
 </body>
 </html>
