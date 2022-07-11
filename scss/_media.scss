@@ -1,193 +1,179 @@
 @media (max-width: 1024px) {
-    // features styles
-    .features {
+  // features styles
+  .features {
+    &__secondary {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 64px;
+    }
+  }
 
-        &__secondary {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            gap: 64px;
+  // product styles
+  .product {
+    &__secondary {
+      &-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .img-wrapper {
+        img {
+          width: 100%;
         }
-    }
+      }
 
-    // product styles
-    .product {
-    
-        &__secondary {
-    
-            &-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .img-wrapper {
-
-                img {
-                    width: 100%;
-                }
-            }
-
-            .item-2 {
-
-                .text-wrapper {
-                    order: 1;
-                }
-
-                .img-wrapper {
-                    order: 2;
-                }
-            }
+      .item-2 {
+        .text-wrapper {
+          order: 1;
         }
-    }
 
-    // footer styles
-    .footer__wrapper {
-        grid-template-columns: 1fr 2fr;
-        gap: 10%;
+        .img-wrapper {
+          order: 2;
+        }
+      }
     }
+  }
+
+  // footer styles
+  .footer__wrapper {
+    grid-template-columns: 1fr 2fr;
+    gap: 10%;
+  }
 }
 
 @media (max-width: 768px) {
-    // subscribe styles
-    .subscribe {
-        grid-template-columns: 1fr;
+  // subscribe styles
+  .subscribe {
+    grid-template-columns: 1fr;
 
-        &__secondary {
-            flex-wrap: wrap;
-            justify-content: left;
-        }
+    &__secondary {
+      flex-wrap: wrap;
+      justify-content: left;
     }
+  }
 
-    // footer styles
-    .footer__wrapper {
-        grid-template-columns: 1fr;
-    }
+  // footer styles
+  .footer__wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
-    // utility styles
-    .txt-primary {
-        font-size: calc($fs-medium - .25rem);
+  // utility styles
+  .txt-primary {
+    font-size: calc($fs-medium - 0.25rem);
+  }
+
+  %btn {
+    padding: 0.3rem 1.25rem;
+    font-size: calc($fs-regular - 0.2rem);
+  }
+
+  // header styles
+  .header .wrapper {
+    .header__menu {
+      gap: 1rem;
+    }
+  }
+
+  // hero section styles
+  .hero {
+    &__primary {
+      h2 {
+        font-size: 2.25rem;
+      }
     }
 
-    %btn {
-        padding: .3rem 1.25rem;
-        font-size: calc($fs-regular - .2rem);
+    &__secondary {
+      img {
+        width: 100%;
+        min-height: 250px;
+      }
+
+      .bg-main {
+        width: 60%;
+        position: absolute;
+        bottom: -3rem;
+        left: -2rem;
+        transform: rotate(-45deg);
+      }
     }
 
-    // header styles
-    .header .wrapper {
-        
-        .header__menu {
-            gap: 1rem;
-        }
+    &__buttons {
+      gap: 0.75rem;
+
+      .btn-primary,
+      .btn-secondary {
+        padding: 0.5rem 1.25rem;
+      }
     }
+  }
 
-    // hero section styles
-    .hero {
-    
-        &__primary {
-    
-            h2 {
-                font-size: 2.25rem;
-            }
-        }
-
-        &__secondary {
-            img {
-                width: 100%;
-                min-height: 250px;
-            }
-
-            .bg-main {
-                width: 60%;
-                position: absolute;
-                bottom: -3rem;
-                left: -2rem;
-                transform: rotate(-45deg);
-            }
-        }
-
-        &__buttons {
-            gap: .75rem;
-    
-            .btn-primary,
-            .btn-secondary {
-                padding: .5rem 1.25rem;
-            }
-        }
+  // features styles
+  .features {
+    &__secondary {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      gap: 64px;
     }
+  }
 
-    // features styles
-    .features {
+  // footer styles
+  .footer__wrapper {
+    gap: 5%;
 
-        &__secondary {
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            gap: 64px;
-        }
+    &-secondary {
+      grid-template-columns: 1fr;
     }
+  }
 
-    // footer styles
-    .footer__wrapper {
-        gap: 5%;
+  .footer__social {
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
-        &-secondary {
-            grid-template-columns: 1fr;
-        }
+    .icon {
+      margin-right: 1rem;
+      &:last-child {
+        margin-right: 0;
+      }
     }
+  }
 
-    .footer__social {
-        gap: 1rem;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    
-        .icon {
-            margin-right: 1rem;
-            &:last-child {
-                margin-right: 0;
-            }
-        }
+  // signup styles
+  .auth__form {
+    .heading-primary {
+      font-size: 2.25rem;
+      text-align: left;
     }
-
-    // signup styles
-    .auth__form {
-        .heading-primary {
-            font-size: 2.25rem;
-            text-align: left;
-        }
-    }
+  }
 }
 
 @media (max-width: 320px) {
-    // header styles
-    .header .wrapper {
-        flex-direction: column;
-        gap: 1rem;
+  // header styles
+  .header .wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  // hero section styles
+  .hero {
+    &__secondary {
+      .bg-main {
+        width: 80%;
+        position: absolute;
+        bottom: -2.5rem;
+        left: -3rem;
+        transform: rotate(-45deg);
+      }
     }
+  }
 
-    // hero section styles
-    .hero {
-    
-        &__secondary {
-
-            .bg-main {
-                width: 80%;
-                position: absolute;
-                bottom: -2.5rem;
-                left: -3rem;
-                transform: rotate(-45deg);
-            }
-        }
+  // signup styles
+  .auth__form {
+    .heading-primary {
+      font-size: 2rem;
+      text-align: left;
     }
-
-    // signup styles
-    .auth__form {
-
-        .heading-primary {
-            font-size: 2rem;
-            text-align: left;
-        }
-    }
-
-
+  }
 }

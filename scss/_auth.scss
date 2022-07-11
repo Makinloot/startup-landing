@@ -1,117 +1,142 @@
 .bg-signup {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
 }
 .auth__wrapper {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 .auth__form {
+  h2 {
+    max-width: 768px;
+    text-align: center;
+  }
 
-    h2 {
-        max-width: 768px;
-        text-align: center;
+  .auth {
+    margin: 4rem auto;
+    max-width: 400px;
+    flex-direction: column;
+    overflow: hidden;
+
+    .google {
+      @extend %btn;
+      width: 100%;
+      background-color: $clr-error;
+      text-align: center;
     }
 
-    .auth {
-        margin: 4rem auto;
-        max-width: 400px;
-        flex-direction: column;
-        overflow: hidden;
-
-        .google {
-            @extend %btn;
-            width: 100%;
-            background-color: $clr-error;
-            text-align: center;
-        }
-
-        %pseudo {
-            content: '';
-            position: absolute;
-            width: 40%;
-            border: 1px solid;
-            top: 50%;
-            transform: translateY(-50%);
-            color: rgba(255, 255, 255, 0.151);
-        }
-
-        .txt-secondary {
-            position: relative;
-
-            &::before {
-                @extend %pseudo;
-                left: -45%;
-            }
-
-            &::after {
-                @extend %pseudo;
-                right: -45%;
-            }
-        }
-
-        .form__input-wrapper {
-            position: relative;
-            width: 100%;
-            margin: 1rem 0;
-            row-gap: 4px;
-
-            label {
-                font-family: $ff-medium;
-                font-size: $fs-small;
-            }
-
-            input {
-                padding: .75rem 1rem;
-                background-color: transparent;
-                border: 1px solid rgba(255, 255, 255, 0.151);
-                border-radius: 4px;
-                outline: none;
-            }
-
-            .input-error {
-                position: absolute;
-                top: 0;
-                right: 0;
-                font-size: $fs-small;
-                color: $clr-error;
-                z-index: 1;
-                display: none;
-
-                &.active {
-                    display: block;
-                }
-            }
-        }
-
-        .checkbox-wrapper {
-            
-            .input-error {
-                top: -1.2rem;
-                left: 0;
-            }
-        }
-
-        input[type=submit] {
-            width: 100%;
-            border: none;
-            cursor: pointer;
-        }
-
-        .check-input {
-            justify-content: space-between;
-            
-        }
+    %pseudo {
+      content: "";
+      position: absolute;
+      width: 40%;
+      border: 1px solid;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255, 255, 255, 0.151);
     }
 
-    .already-registered {
-        display: block;
-        text-align: center;
-        
-        a {
-            color: $clr-primary;
-        }
+    .txt-secondary {
+      position: relative;
+
+      &::before {
+        @extend %pseudo;
+        left: -45%;
+      }
+
+      &::after {
+        @extend %pseudo;
+        right: -45%;
+      }
     }
+
+    .form__input-wrapper {
+      position: relative;
+      width: 100%;
+      margin: 1rem 0;
+      row-gap: 4px;
+
+      label {
+        font-family: $ff-medium;
+        font-size: $fs-small;
+      }
+
+      input {
+        padding: 0.75rem 1rem;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.151);
+        border-radius: 4px;
+        outline: none;
+      }
+
+      .input-error {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: $fs-small;
+        color: $clr-error;
+        z-index: 1;
+        display: none;
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+
+    .checkbox-wrapper {
+      .input-error {
+        top: -1.2rem;
+        left: 0;
+      }
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+    }
+
+    .check-input {
+      justify-content: space-between;
+    }
+  }
+
+  .already-registered {
+    display: block;
+    text-align: center;
+
+    a {
+      color: $clr-primary;
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+
+  .txt-secondary {
+    color: $clr-success;
+  }
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.555);
+  }
+
+  &-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.2rem;
+    color: $clr-error;
+    background-color: transparent;
+    border: none;
+    font-size: $fs-medium;
+    cursor: pointer;
+  }
 }

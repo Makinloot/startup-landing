@@ -1,54 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>StartUp | Sign Up</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container p-1">
-        <img class="bg-signup" src="../images/shape.png" alt="shapes">
-        <div class="auth__wrapper flex">
-            <div class="auth__form">
-                <h2 class="heading-primary">We exist to make things easier.</h2>
-                <form class="auth flex" id="signup-form" action="./signin.html" novalidate>
-                    <a class="google" href="#">sign up with google</a>
-                    <span class="txt-secondary my-2">Or, register with your email</span>
-                    <div class="form__input-wrapper grid">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" placeholder="Username" minlength="6" maxlength="16" autocomplete="off" required>
-                        <span class="input-error flex" id="username-error">Minimum 4 characters</span>
-                    </div>
-                    <div class="form__input-wrapper grid">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Email address" autocomplete="off" required>
-                        <span class="input-error flex" id="email-error"></span>
-                    </div>
-                    <div class="form__input-wrapper grid">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" placeholder="Password" autocomplete="off" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
-                        <span class="input-error flex" id="password-error"></span>
-                    </div>
-                    <div class="form__input-wrapper grid">
-                        <label for="confirm-password">Confirm password</label>
-                        <input type="password" id="confirm-password" placeholder="Confirm password" autocomplete="off" required>
-                        <span class="input-error flex" id="confirm-password-error"></span>
-                    </div>
-                    <div class="form__input-wrapper checkbox-wrapper">
-                        <input type="checkbox" name="privacy-policy" id="privacy-policy" required>
-                        <label for="privacy-policy">I agree to be contacted by Open PRO about this offer as per the Open PRO <a href="#" style="color: #5D5DFF">Privacy Policy.</a></label>
-                        <span class="input-error" id="checkbox-error">You must accept our privacy policy rules</span>
-                    </div>
-                    <input class="btn-primary" type="submit" value="Sign Up">
-                </form>
-                <span class="already-registered txt-secondary">Already using Open PRO? <a href="./signin.html">Sign in</a> or <a href="../index.html">Go back</a></span>
+      <img class="bg-signup" src="../images/shape.png" alt="shapes" />
+      <div class="auth__wrapper flex">
+        <div class="auth__form">
+          <h2 class="heading-primary">We exist to make things easier.</h2>
+          <form
+            class="auth flex"
+            id="signup-form"
+            action="./signin.html"
+            novalidate
+          >
+            <a class="google" href="#">sign up with google</a>
+            <span class="txt-secondary my-2">Or, register with your email</span>
+            <div class="form__input-wrapper grid">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                minlength="6"
+                maxlength="16"
+                autocomplete="off"
+                required
+              />
+              <span class="input-error flex" id="username-error"
+                >Minimum 4 characters</span
+              >
             </div>
+            <div class="form__input-wrapper grid">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email address"
+                autocomplete="off"
+                required
+              />
+              <span class="input-error flex" id="email-error"></span>
+            </div>
+            <div class="form__input-wrapper grid">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                autocomplete="off"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+                required
+              />
+              <span class="input-error flex" id="password-error"></span>
+            </div>
+            <div class="form__input-wrapper grid">
+              <label for="confirm-password">Confirm password</label>
+              <input
+                type="password"
+                id="confirm-password"
+                placeholder="Confirm password"
+                autocomplete="off"
+                required
+              />
+              <span class="input-error flex" id="confirm-password-error"></span>
+            </div>
+            <div class="form__input-wrapper checkbox-wrapper">
+              <input
+                type="checkbox"
+                name="privacy-policy"
+                id="privacy-policy"
+                required
+              />
+              <label for="privacy-policy"
+                >I agree to be contacted by Open PRO about this offer as per the
+                Open PRO
+                <a href="#" style="color: #5d5dff">Privacy Policy.</a></label
+              >
+              <span class="input-error" id="checkbox-error"
+                >You must accept our privacy policy rules</span
+              >
+            </div>
+            <input class="btn-primary" type="submit" value="Sign Up" />
+          </form>
+          <span class="already-registered txt-secondary"
+            >Already using Open PRO? <a href="./signin.html">Sign in</a> or
+            <a href="../index.html">Go back</a></span
+          >
         </div>
+      </div>
+      <dialog class="modal p-2" id="modal">
+        <h2 class="txt-secondary my-1">Successfully registered!</h2>
+        <div class="my-1">
+          <a href="./signin.html" class="btn-primary">Sign in</a>
+          <a href="../index.html" class="btn-secondary">Main page</a>
+        </div>
+        <button
+          class="modal-close"
+          id="modal-close"
+          onclick="closeModal(modal)"
+        >
+          X
+        </button>
+      </dialog>
     </div>
 
     <script src="../js/auth.js"></script>
-</body>
+  </body>
 </html>
