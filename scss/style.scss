@@ -2,8 +2,6 @@
 @import "fonts";
 @import "https://unpkg.com/swiper/swiper-bundle.min.css";
 @import "auth";
-@import "utilities";
-@import "media";
 
 // reset css
 *,
@@ -27,6 +25,8 @@ body {
   background-color: #17181a;
 }
 
+@import "utilities";
+
 // header styles
 .header .container {
   position: relative;
@@ -48,15 +48,15 @@ body {
     text-transform: capitalize;
 
     a {
-      margin-right: 3rem;
+      margin-right: 1rem;
 
-      &:nth-child(2) {
-        margin-right: 0.5rem;
-      }
+      // &:nth-child(2) {
+      //   margin-right: 0.5rem;
+      // }
 
-      &:last-child {
-        margin-right: 0;
-      }
+      // &:last-child {
+      //   margin-right: 0;
+      // }
     }
   }
 }
@@ -309,3 +309,5 @@ body {
     }
   }
 }
+
+@import "media";
